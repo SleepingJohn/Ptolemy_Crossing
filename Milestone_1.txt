@@ -1,0 +1,23 @@
+// Baumann 11807909
+// Geiger 01421443
+// Spilka 11724817
+Meeting notes:
+
+lane-merge tool demos alle durchschauen und wiederverwenden, wenn brauchbar.
+Eine Kreutzung mit Ampeln ohne schnick schnack.
+
+zwei Autotypen : autonom und humans 	
+
+autonom: Geschwindigkeit berechnen und Auto folgt automatisch. braucht keine Ampeln.
+humans:  humans fahren leicht unterschiedlich und human bleibt nur stehen wenn Ampeln auf rot sind.
+-
+humans : unterschiedliche Directors
+autonom: ein Director für alle.
+
+##########################################
+
+Bis zum nächsten meeting:
+Erstellung einer Kreuzung mit Autos, Erkennung via Sensor, poissonclock, etz. 
+Directors können wiederverwendet oder neu gemacht werden, je nachdem was sinnvoller ist.
+Wie lässt sich eine Ampel modelieren?
+Erstellung von einem Kreuzungsmodell, Automodell und wie man diese und andere Komponenten modelieren kann?
