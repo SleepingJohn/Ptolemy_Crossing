@@ -1,8 +1,8 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE entity PUBLIC "-//UC Berkeley//DTD MoML 1//EN"
     "http://ptolemy.eecs.berkeley.edu/xml/dtd/MoML_1.dtd">
-<entity name="Intersec" class="ptolemy.actor.TypedCompositeActor">
-    <property name="_createdBy" class="ptolemy.kernel.attributes.VersionAttribute" value="11.0.1_20180619">
+<entity name="aktuell" class="ptolemy.actor.TypedCompositeActor">
+    <property name="_createdBy" class="ptolemy.kernel.attributes.VersionAttribute" value="10.0.1_20141217">
     </property>
     <property name="Annotation" class="ptolemy.vergil.kernel.attributes.TextAttribute">
         <property name="text" class="ptolemy.kernel.util.StringAttribute" value="Traffic Light 1">
@@ -11,13 +11,13 @@
         </property>
     </property>
     <property name="Rectangle" class="ptolemy.vergil.kernel.attributes.RectangleAttribute">
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[1120.0, 25.0]">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[1120.0, 0.0]">
         </property>
         <property name="lineWidth" class="ptolemy.data.expr.Parameter" value="2.0">
         </property>
         <property name="width" class="ptolemy.data.expr.Parameter" value="50.0">
         </property>
-        <property name="height" class="ptolemy.data.expr.Parameter" value="140.0">
+        <property name="height" class="ptolemy.data.expr.Parameter" value="95.0">
         </property>
         <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
         </property>
@@ -29,23 +29,11 @@
         </property>
         <property name="height" class="ptolemy.data.expr.Parameter" value="40.0">
         </property>
-        <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.99607843,0.96862745,0.19607843,1.0}">
+        <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+        </property>
+        <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.13333334,0.9137255,0.007843138,1.0}">
         </property>
         <property name="yellow_light" class="ptolemy.data.expr.Parameter" value="">
-        </property>
-    </property>
-    <property name="Ellipse2" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[1120.0, 70.0]">
-        </property>
-        <property name="width" class="ptolemy.data.expr.Parameter" value="40.0">
-        </property>
-        <property name="height" class="ptolemy.data.expr.Parameter" value="40.0">
-        </property>
-        <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.09803922,0.9529412,0.14117648,1.0}">
-        </property>
-        <property name="Green_light" class="ptolemy.data.expr.Parameter" value="">
-        </property>
-        <property name="Green_ight" class="ptolemy.data.expr.Parameter" value="">
         </property>
     </property>
     <property name="Ellipse3" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
@@ -65,13 +53,13 @@
         </property>
     </property>
     <property name="Rectangle2" class="ptolemy.vergil.kernel.attributes.RectangleAttribute">
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[1120.0, 245.0]">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="1120.0, 222.5">
         </property>
         <property name="lineWidth" class="ptolemy.data.expr.Parameter" value="2.0">
         </property>
         <property name="width" class="ptolemy.data.expr.Parameter" value="50.0">
         </property>
-        <property name="height" class="ptolemy.data.expr.Parameter" value="140.0">
+        <property name="height" class="ptolemy.data.expr.Parameter" value="95.0">
         </property>
         <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
         </property>
@@ -83,23 +71,9 @@
         </property>
         <property name="height" class="ptolemy.data.expr.Parameter" value="40.0">
         </property>
-        <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.99607843,0.96862745,0.19607843,1.0}">
+        <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.13333334,0.9137255,0.007843138,1.0}">
         </property>
         <property name="yellow_light" class="ptolemy.data.expr.Parameter" value="">
-        </property>
-    </property>
-    <property name="Ellipse5" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
-        <property name="_location" class="ptolemy.kernel.util.Location" value="1120.0, 290.0">
-        </property>
-        <property name="width" class="ptolemy.data.expr.Parameter" value="40.0">
-        </property>
-        <property name="height" class="ptolemy.data.expr.Parameter" value="40.0">
-        </property>
-        <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.09803922,0.9529412,0.14117648,1.0}">
-        </property>
-        <property name="Green_light" class="ptolemy.data.expr.Parameter" value="">
-        </property>
-        <property name="Green_ight" class="ptolemy.data.expr.Parameter" value="">
         </property>
     </property>
     <property name="Ellipse6" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
@@ -112,139 +86,28 @@
         <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{1.0,0.0,0.0,1.0}">
         </property>
     </property>
-    <property name="Annotation3" class="ptolemy.vergil.kernel.attributes.TextAttribute">
-        <property name="text" class="ptolemy.kernel.util.StringAttribute" value="Traffic Light 3">
-        </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[1080.0, 355.0]">
-        </property>
-    </property>
-    <property name="Rectangle3" class="ptolemy.vergil.kernel.attributes.RectangleAttribute">
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[1125.0, 455.0]">
-        </property>
-        <property name="lineWidth" class="ptolemy.data.expr.Parameter" value="2.0">
-        </property>
-        <property name="width" class="ptolemy.data.expr.Parameter" value="50.0">
-        </property>
-        <property name="height" class="ptolemy.data.expr.Parameter" value="140.0">
-        </property>
-        <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
-        </property>
-    </property>
-    <property name="Ellipse7" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[1125.0, 455.0]">
-        </property>
-        <property name="width" class="ptolemy.data.expr.Parameter" value="40.0">
-        </property>
-        <property name="height" class="ptolemy.data.expr.Parameter" value="40.0">
-        </property>
-        <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.99607843,0.96862745,0.19607843,1.0}">
-        </property>
-        <property name="yellow_light" class="ptolemy.data.expr.Parameter" value="">
-        </property>
-    </property>
-    <property name="Ellipse8" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[1125.0, 500.0]">
-        </property>
-        <property name="width" class="ptolemy.data.expr.Parameter" value="40.0">
-        </property>
-        <property name="height" class="ptolemy.data.expr.Parameter" value="40.0">
-        </property>
-        <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.09803922,0.9529412,0.14117648,1.0}">
-        </property>
-        <property name="Green_light" class="ptolemy.data.expr.Parameter" value="">
-        </property>
-        <property name="Green_ight" class="ptolemy.data.expr.Parameter" value="">
-        </property>
-    </property>
-    <property name="Ellipse9" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[1125.0, 410.0]">
-        </property>
-        <property name="width" class="ptolemy.data.expr.Parameter" value="40.0">
-        </property>
-        <property name="height" class="ptolemy.data.expr.Parameter" value="40.0">
-        </property>
-        <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{1.0,0.0,0.0,1.0}">
-        </property>
-    </property>
-    <property name="Annotation4" class="ptolemy.vergil.kernel.attributes.TextAttribute">
-        <property name="text" class="ptolemy.kernel.util.StringAttribute" value="Traffic Light 4">
-        </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[1080.0, 575.0]">
-        </property>
-    </property>
-    <property name="Rectangle4" class="ptolemy.vergil.kernel.attributes.RectangleAttribute">
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[1125.0, 675.0]">
-        </property>
-        <property name="lineWidth" class="ptolemy.data.expr.Parameter" value="2.0">
-        </property>
-        <property name="width" class="ptolemy.data.expr.Parameter" value="50.0">
-        </property>
-        <property name="height" class="ptolemy.data.expr.Parameter" value="140.0">
-        </property>
-        <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
-        </property>
-    </property>
-    <property name="Ellipse10" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[1125.0, 675.0]">
-        </property>
-        <property name="width" class="ptolemy.data.expr.Parameter" value="40.0">
-        </property>
-        <property name="height" class="ptolemy.data.expr.Parameter" value="40.0">
-        </property>
-        <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.99607843,0.96862745,0.19607843,1.0}">
-        </property>
-        <property name="yellow_light" class="ptolemy.data.expr.Parameter" value="">
-        </property>
-    </property>
-    <property name="Ellipse11" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[1125.0, 720.0]">
-        </property>
-        <property name="width" class="ptolemy.data.expr.Parameter" value="40.0">
-        </property>
-        <property name="height" class="ptolemy.data.expr.Parameter" value="40.0">
-        </property>
-        <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.09803922,0.9529412,0.14117648,1.0}">
-        </property>
-        <property name="Green_light" class="ptolemy.data.expr.Parameter" value="">
-        </property>
-        <property name="Green_ight" class="ptolemy.data.expr.Parameter" value="">
-        </property>
-    </property>
-    <property name="Ellipse12" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[1125.0, 630.0]">
-        </property>
-        <property name="width" class="ptolemy.data.expr.Parameter" value="40.0">
-        </property>
-        <property name="height" class="ptolemy.data.expr.Parameter" value="40.0">
-        </property>
-        <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{1.0,0.0,0.0,1.0}">
-        </property>
-    </property>
-    <property name="Annotation5" class="ptolemy.vergil.kernel.attributes.TextAttribute">
-        <property name="textSize" class="ptolemy.data.expr.Parameter" value="10">
-        </property>
-        <property name="text" class="ptolemy.kernel.util.StringAttribute" value="General Model Description:This model shows a intersection between four roads controlled by one traffic lights for each road.The crossing actor has a sensor that measures type, speed and distance of an vehicle. A distinction is made between autonomous cars and human-driven cars.If the sensor only perceives autonomous cars, all traffic lights are switched to green,otherwise the crossing actor takes over the traffic light control.The Poisson Clock generates a new vehicle with a certain speed.">
-        </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[60.0, 690.0]">
-        </property>
-    </property>
     <property name="DE Director" class="ptolemy.domains.de.kernel.DEDirector">
         <property name="stopTime" class="ptolemy.data.expr.Parameter" value="140.0">
         </property>
         <property name="_location" class="ptolemy.kernel.util.Location" value="{-35, -170}">
         </property>
     </property>
-    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={67, 25, 1293, 743}, maximized=true}">
+    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={70, 27, 1850, 1053}, maximized=true}">
     </property>
-    <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1079, 612]">
+    <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1634, 917]">
     </property>
-    <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.0000000000000036">
+    <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="0.32768000000000175">
     </property>
-    <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{117.8803879310343, 92.78448275862064}">
+    <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{1371.9048780487806, 89.1032012195119}">
     </property>
     <class name="RandomInteger" extends="ptolemy.actor.lib.RandomInteger">
         <doc>Create a sequence of integers that are uniformly sampled from the range 32-bit integers</doc>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[310.0, 130.0]">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[275.0, 15.0]">
+        </property>
+    </class>
+    <class name="RandomInteger2" extends="ptolemy.actor.lib.RandomInteger">
+        <doc>Create a sequence of integers that are uniformly sampled from the range 32-bit integers</doc>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[280.0, 105.0]">
         </property>
     </class>
     <entity name="CompositeActor" class="ptolemy.actor.TypedCompositeActor">
@@ -947,8 +810,13 @@
         </property>
         <property name="stopTime" class="ptolemy.data.expr.Parameter" value="300.0">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[-60.0, 0.0]">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{-60.0, 0.0}">
         </property>
+        <port name="2output" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <property name="defaultValue" class="ptolemy.data.expr.Parameter">
+            </property>
+        </port>
     </entity>
     <entity name="PoissonClock2" class="ptolemy.actor.lib.PoissonClock">
         <property name="meanTime" class="ptolemy.data.expr.Parameter" value="8.0">
