@@ -1,7 +1,7 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE entity PUBLIC "-//UC Berkeley//DTD MoML 1//EN"
     "http://ptolemy.eecs.berkeley.edu/xml/dtd/MoML_1.dtd">
-<entity name="Intersec" class="ptolemy.actor.TypedCompositeActor">
+<entity name="aktuell" class="ptolemy.actor.TypedCompositeActor">
     <property name="_createdBy" class="ptolemy.kernel.attributes.VersionAttribute" value="11.0.1_20180619">
     </property>
     <property name="Annotation" class="ptolemy.vergil.kernel.attributes.TextAttribute">
@@ -231,22 +231,19 @@
     <property name="DE Director" class="ptolemy.domains.de.kernel.DEDirector">
         <property name="stopTime" class="ptolemy.data.expr.Parameter" value="140.0">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{-35, -170}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[-50.875, -275.65625]">
         </property>
     </property>
     <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={67, 25, 1293, 743}, maximized=true}">
     </property>
     <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1079, 612]">
     </property>
-    <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.0000000000000036">
+    <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.000000000000005">
     </property>
-    <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{117.8803879310343, 92.78448275862064}">
+    <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{666.1109913793105, -100.47652401477825}">
     </property>
-    <class name="RandomInteger" extends="ptolemy.actor.lib.RandomInteger">
-        <doc>Create a sequence of integers that are uniformly sampled from the range 32-bit integers</doc>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[310.0, 130.0]">
-        </property>
-    </class>
+    <property name="enableBackwardTypeInference" class="ptolemy.data.expr.Parameter" value="false">
+    </property>
     <entity name="CompositeActor" class="ptolemy.actor.TypedCompositeActor">
         <property name="_location" class="ptolemy.kernel.util.Location" value="[565.0, 300.0]">
         </property>
@@ -254,7 +251,7 @@
         </property>
         <property name="is_autonomous_2" class="ptolemy.data.expr.Parameter" value="false">
         </property>
-        <property name="is_autonomous_3" class="ptolemy.data.expr.Parameter" value="true">
+        <property name="is_autonomous_3" class="ptolemy.data.expr.Parameter" value="false">
         </property>
         <property name="is_autonomous_4" class="ptolemy.data.expr.Parameter" value="false">
         </property>
@@ -934,20 +931,12 @@
         <link port="Expression10.input" relation="relation19"/>
         <link port="Expression11.input" relation="relation20"/>
     </entity>
-    <entity name="Display" class="ptolemy.actor.lib.gui.Display">
-        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={631, 384, 541, 235}, maximized=false}">
-        </property>
-        <property name="_paneSize" class="ptolemy.actor.gui.SizeAttribute" value="[541, 182]">
-        </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[940.0, 15.0]">
-        </property>
-    </entity>
     <entity name="PoissonClock" class="ptolemy.actor.lib.PoissonClock">
         <property name="meanTime" class="ptolemy.data.expr.Parameter" value="6.0">
         </property>
         <property name="stopTime" class="ptolemy.data.expr.Parameter" value="300.0">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[-60.0, 0.0]">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[-65.875, -115.65625]">
         </property>
     </entity>
     <entity name="PoissonClock2" class="ptolemy.actor.lib.PoissonClock">
@@ -955,7 +944,7 @@
         </property>
         <property name="stopTime" class="ptolemy.data.expr.Parameter" value="300.0">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[-60.0, 145.0]">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[-70.0, 120.0]">
         </property>
     </entity>
     <entity name="PoissonClock3" class="ptolemy.actor.lib.PoissonClock">
@@ -963,17 +952,167 @@
         </property>
         <property name="stopTime" class="ptolemy.data.expr.Parameter" value="300.0">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[-60.0, 295.0]">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[-65.0, 340.0]">
         </property>
     </entity>
     <entity name="PoissonClock4" class="ptolemy.actor.lib.PoissonClock">
         <property name="meanTime" class="ptolemy.data.expr.Parameter" value="9.0">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[-60.0, 465.0]">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[-80.0, 565.0]">
         </property>
     </entity>
+    <entity name="RandomCarType" class="ptolemy.actor.lib.RandomCarType">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[154.125, -165.65625]">
+        </property>
+    </entity>
+    <entity name="RandomIntegerSpeed" class="ptolemy.actor.lib.RandomIntegerSpeed">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[154.125, -60.65625]">
+        </property>
+    </entity>
+    <entity name="RandomCarType2" class="ptolemy.actor.lib.RandomCarType">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[155.0, 65.0]">
+        </property>
+    </entity>
+    <entity name="RandomIntegerSpeed2" class="ptolemy.actor.lib.RandomIntegerSpeed">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[150.0, 170.0]">
+        </property>
+    </entity>
+    <entity name="RandomCarType3" class="ptolemy.actor.lib.RandomCarType">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[150.0, 295.0]">
+        </property>
+    </entity>
+    <entity name="RandomIntegerSpeed3" class="ptolemy.actor.lib.RandomIntegerSpeed">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[150.0, 400.0]">
+        </property>
+    </entity>
+    <entity name="RandomCarType4" class="ptolemy.actor.lib.RandomCarType">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[150.0, 510.0]">
+        </property>
+    </entity>
+    <entity name="RandomIntegerSpeed4" class="ptolemy.actor.lib.RandomIntegerSpeed">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[150.0, 615.0]">
+        </property>
+    </entity>
+    <entity name="RecordAssembler" class="ptolemy.actor.lib.RecordAssembler">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[370.0, -145.0]">
+        </property>
+        <port name="output" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <property name="_type" class="ptolemy.actor.TypeAttribute" value="{x=int, y=int}">
+            </property>
+        </port>
+        <port name="x" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <property name="defaultValue" class="ptolemy.data.expr.Parameter">
+            </property>
+            <property name="_type" class="ptolemy.actor.TypeAttribute" value="int">
+            </property>
+        </port>
+        <port name="y" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <property name="defaultValue" class="ptolemy.data.expr.Parameter">
+            </property>
+            <property name="_type" class="ptolemy.actor.TypeAttribute" value="int">
+            </property>
+        </port>
+    </entity>
+    <entity name="Display" class="ptolemy.actor.lib.gui.Display">
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={404, 266, 541, 235}, maximized=false}">
+        </property>
+        <property name="_paneSize" class="ptolemy.actor.gui.SizeAttribute" value="[541, 182]">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[830.0, -165.0]">
+        </property>
+    </entity>
+    <entity name="RecordDisassembler" class="ptolemy.actor.lib.RecordDisassembler">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[525.0, -150.0]">
+        </property>
+        <port name="input" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+            <property name="_type" class="ptolemy.actor.TypeAttribute" value="{x=int, y=int}">
+            </property>
+        </port>
+        <port name="x" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <property name="defaultValue" class="ptolemy.data.expr.Parameter">
+            </property>
+            <property name="_type" class="ptolemy.actor.TypeAttribute" value="int">
+            </property>
+        </port>
+        <port name="y" class="ptolemy.actor.TypedIOPort">
+            <property name="output"/>
+            <property name="defaultValue" class="ptolemy.data.expr.Parameter">
+            </property>
+            <property name="_type" class="ptolemy.actor.TypeAttribute" value="int">
+            </property>
+        </port>
+    </entity>
+    <relation name="relation" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <vertex name="vertex1" value="[40.0, -115.0]">
+        </vertex>
+    </relation>
+    <relation name="relation5" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <vertex name="vertex1" value="[45.0, 120.0]">
+        </vertex>
+    </relation>
+    <relation name="relation7" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <vertex name="vertex1" value="[40.0, 340.0]">
+        </vertex>
+    </relation>
+    <relation name="relation8" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <vertex name="vertex1" value="[40.0, 565.0]">
+        </vertex>
+    </relation>
+    <relation name="relation2" class="ptolemy.actor.TypedIORelation">
+    </relation>
+    <relation name="relation3" class="ptolemy.actor.TypedIORelation">
+    </relation>
+    <relation name="relation4" class="ptolemy.actor.TypedIORelation">
+    </relation>
     <relation name="relation6" class="ptolemy.actor.TypedIORelation">
     </relation>
-    <link port="CompositeActor.tl_1" relation="relation6"/>
-    <link port="Display.input" relation="relation6"/>
+    <relation name="relation9" class="ptolemy.actor.TypedIORelation">
+    </relation>
+    <relation name="relation10" class="ptolemy.actor.TypedIORelation">
+    </relation>
+    <relation name="relation11" class="ptolemy.actor.TypedIORelation">
+    </relation>
+    <relation name="relation12" class="ptolemy.actor.TypedIORelation">
+    </relation>
+    <link port="CompositeActor.speed_2" relation="relation3"/>
+    <link port="CompositeActor.speed_3" relation="relation4"/>
+    <link port="CompositeActor.speed_4" relation="relation6"/>
+    <link port="CompositeActor.speed_1" relation="relation9"/>
+    <link port="PoissonClock.output" relation="relation"/>
+    <link port="PoissonClock2.output" relation="relation5"/>
+    <link port="PoissonClock3.output" relation="relation7"/>
+    <link port="PoissonClock4.output" relation="relation8"/>
+    <link port="RandomCarType.output" relation="relation2"/>
+    <link port="RandomCarType.trigger" relation="relation"/>
+    <link port="RandomIntegerSpeed.output" relation="relation10"/>
+    <link port="RandomIntegerSpeed.trigger" relation="relation"/>
+    <link port="RandomCarType2.output" relation="relation3"/>
+    <link port="RandomCarType2.trigger" relation="relation5"/>
+    <link port="RandomIntegerSpeed2.output" relation="relation4"/>
+    <link port="RandomIntegerSpeed2.trigger" relation="relation5"/>
+    <link port="RandomCarType3.output" relation="relation6"/>
+    <link port="RandomCarType3.trigger" relation="relation7"/>
+    <link port="RandomIntegerSpeed3.output" relation="relation9"/>
+    <link port="RandomIntegerSpeed3.trigger" relation="relation7"/>
+    <link port="RandomCarType4.trigger" relation="relation8"/>
+    <link port="RandomIntegerSpeed4.trigger" relation="relation8"/>
+    <link port="RecordAssembler.output" relation="relation11"/>
+    <link port="RecordAssembler.x" relation="relation2"/>
+    <link port="RecordAssembler.y" relation="relation10"/>
+    <link port="Display.input" relation="relation12"/>
+    <link port="RecordDisassembler.input" relation="relation11"/>
+    <link port="RecordDisassembler.x" relation="relation12"/>
 </entity>
