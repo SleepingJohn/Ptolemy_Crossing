@@ -230,7 +230,7 @@
         <property name="_location" class="ptolemy.kernel.util.Location" value="[10.0, 705.0]">
         </property>
     </property>
-    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 23, 1440, 823}, maximized=true}">
+    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 24, 1440, 823}, maximized=true}">
     </property>
     <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1206, 713]">
     </property>
@@ -605,7 +605,7 @@
         </port>
     </entity>
     <entity name="Display1" class="ptolemy.actor.lib.gui.Display">
-        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={54, 185, 354, 281}, maximized=false}">
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={587, 171, 354, 305}, maximized=false}">
         </property>
         <property name="_paneSize" class="ptolemy.actor.gui.SizeAttribute" value="[354, 237]">
         </property>
@@ -623,7 +623,7 @@
         </port>
     </entity>
     <entity name="Display2" class="ptolemy.actor.lib.gui.Display">
-        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={591, 187, 354, 277}, maximized=false}">
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={959, 162, 352, 311}, maximized=false}">
         </property>
         <property name="_paneSize" class="ptolemy.actor.gui.SizeAttribute" value="[354, 233]">
         </property>
@@ -641,7 +641,7 @@
         </port>
     </entity>
     <entity name="Display3" class="ptolemy.actor.lib.gui.Display">
-        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={55, 489, 355, 312}, maximized=false}">
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={587, 492, 355, 318}, maximized=false}">
         </property>
         <property name="_paneSize" class="ptolemy.actor.gui.SizeAttribute" value="[355, 268]">
         </property>
@@ -659,7 +659,7 @@
         </port>
     </entity>
     <entity name="Display4" class="ptolemy.actor.lib.gui.Display">
-        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={592, 482, 355, 321}, maximized=false}">
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={962, 488, 355, 321}, maximized=false}">
         </property>
         <property name="_paneSize" class="ptolemy.actor.gui.SizeAttribute" value="[355, 277]">
         </property>
@@ -1322,6 +1322,38 @@
             </property>
         </port>
     </entity>
+    <entity name="Display5" class="ptolemy.actor.lib.gui.Display">
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={33, 50, 412, 175}, maximized=false}">
+        </property>
+        <property name="_paneSize" class="ptolemy.actor.gui.SizeAttribute" value="[354, 237]">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[590.0, -35.0]">
+        </property>
+    </entity>
+    <entity name="Display6" class="ptolemy.actor.lib.gui.Display">
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={39, 241, 405, 177}, maximized=false}">
+        </property>
+        <property name="_paneSize" class="ptolemy.actor.gui.SizeAttribute" value="[354, 237]">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[595.0, 190.0]">
+        </property>
+    </entity>
+    <entity name="Display7" class="ptolemy.actor.lib.gui.Display">
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={40, 436, 405, 185}, maximized=false}">
+        </property>
+        <property name="_paneSize" class="ptolemy.actor.gui.SizeAttribute" value="[354, 237]">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[590.0, 425.0]">
+        </property>
+    </entity>
+    <entity name="Display8" class="ptolemy.actor.lib.gui.Display">
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={41, 628, 402, 183}, maximized=false}">
+        </property>
+        <property name="_paneSize" class="ptolemy.actor.gui.SizeAttribute" value="[354, 237]">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[590.0, 645.0]">
+        </property>
+    </entity>
     <relation name="relation" class="ptolemy.actor.TypedIORelation">
         <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
         </property>
@@ -1398,13 +1430,9 @@
     </relation>
     <relation name="relation14" class="ptolemy.actor.TypedIORelation">
     </relation>
-    <relation name="relation15" class="ptolemy.actor.TypedIORelation">
-    </relation>
     <relation name="relation16" class="ptolemy.actor.TypedIORelation">
     </relation>
     <relation name="relation17" class="ptolemy.actor.TypedIORelation">
-    </relation>
-    <relation name="relation18" class="ptolemy.actor.TypedIORelation">
     </relation>
     <relation name="relation19" class="ptolemy.actor.TypedIORelation">
     </relation>
@@ -1413,10 +1441,6 @@
     <relation name="relation21" class="ptolemy.actor.TypedIORelation">
     </relation>
     <relation name="relation22" class="ptolemy.actor.TypedIORelation">
-    </relation>
-    <relation name="relation23" class="ptolemy.actor.TypedIORelation">
-    </relation>
-    <relation name="relation24" class="ptolemy.actor.TypedIORelation">
     </relation>
     <relation name="relation29" class="ptolemy.actor.TypedIORelation">
     </relation>
@@ -1434,6 +1458,30 @@
     </relation>
     <relation name="relation45" class="ptolemy.actor.TypedIORelation">
     </relation>
+    <relation name="relation47" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <vertex name="vertex1" value="[545.0, -115.0]">
+        </vertex>
+    </relation>
+    <relation name="relation24" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <vertex name="vertex1" value="[545.0, 115.0]">
+        </vertex>
+    </relation>
+    <relation name="relation15" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <vertex name="vertex1" value="[545.0, 345.0]">
+        </vertex>
+    </relation>
+    <relation name="relation18" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <vertex name="vertex1" value="[545.0, 565.0]">
+        </vertex>
+    </relation>
     <link port="RandomCarType.output" relation="relation10"/>
     <link port="RandomCarType.trigger" relation="relation"/>
     <link port="RandomIntegerSpeed.output" relation="relation11"/>
@@ -1450,16 +1498,16 @@
     <link port="RandomCarType4.trigger" relation="relation8"/>
     <link port="RandomIntegerSpeed4.output" relation="relation12"/>
     <link port="RandomIntegerSpeed4.trigger" relation="relation8"/>
-    <link port="RecordAssembler.output" relation="relation24"/>
+    <link port="RecordAssembler.output" relation="relation47"/>
     <link port="RecordAssembler.type" relation="relation10"/>
     <link port="RecordAssembler.speed" relation="relation11"/>
-    <link port="RecordAssembler2.output" relation="relation15"/>
+    <link port="RecordAssembler2.output" relation="relation24"/>
     <link port="RecordAssembler2.type" relation="relation2"/>
     <link port="RecordAssembler2.speed" relation="relation3"/>
-    <link port="RecordAssembler3.output" relation="relation18"/>
+    <link port="RecordAssembler3.output" relation="relation15"/>
     <link port="RecordAssembler3.type" relation="relation4"/>
     <link port="RecordAssembler3.speed" relation="relation6"/>
-    <link port="RecordAssembler4.output" relation="relation23"/>
+    <link port="RecordAssembler4.output" relation="relation18"/>
     <link port="RecordAssembler4.type" relation="relation9"/>
     <link port="RecordAssembler4.speed" relation="relation12"/>
     <link port="SetVariable.input" relation="relation30"/>
@@ -1522,16 +1570,20 @@
     <link port="ModalModel.TLgrn3" relation="relation43"/>
     <link port="ModalModel.TLred4" relation="relation44"/>
     <link port="ModalModel.TLgrn4" relation="relation45"/>
-    <link port="RecordDisassembler.input" relation="relation15"/>
+    <link port="RecordDisassembler.input" relation="relation24"/>
     <link port="RecordDisassembler.type" relation="relation16"/>
     <link port="RecordDisassembler.speed" relation="relation17"/>
-    <link port="RecordDisassembler2.input" relation="relation18"/>
+    <link port="RecordDisassembler2.input" relation="relation15"/>
     <link port="RecordDisassembler2.type" relation="relation19"/>
     <link port="RecordDisassembler2.speed" relation="relation20"/>
-    <link port="RecordDisassembler3.input" relation="relation23"/>
+    <link port="RecordDisassembler3.input" relation="relation18"/>
     <link port="RecordDisassembler3.type" relation="relation21"/>
     <link port="RecordDisassembler3.speed" relation="relation22"/>
-    <link port="RecordDisassembler4.input" relation="relation24"/>
+    <link port="RecordDisassembler4.input" relation="relation47"/>
     <link port="RecordDisassembler4.type" relation="relation14"/>
     <link port="RecordDisassembler4.speed" relation="relation13"/>
+    <link port="Display5.input" relation="relation47"/>
+    <link port="Display6.input" relation="relation24"/>
+    <link port="Display7.input" relation="relation15"/>
+    <link port="Display8.input" relation="relation18"/>
 </entity>
