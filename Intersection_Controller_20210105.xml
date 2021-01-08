@@ -49,7 +49,7 @@
         </property>
     </property>
     <property name="Ellipse3" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[1855.0, -150.0]">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{1855.0, -150.0}">
         </property>
         <property name="width" class="ptolemy.data.expr.Parameter" value="40.0">
         </property>
@@ -234,13 +234,13 @@
     </property>
     <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1206, 713]">
     </property>
-    <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="0.5120000000000164">
+    <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="330.8722450212226">
     </property>
-    <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{781.724636627907, 244.1199400436047}">
+    <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{750.3068313953493, 375.2637627180232}">
     </property>
     <property name="enableBackwardTypeInference" class="ptolemy.data.expr.Parameter" value="false">
     </property>
-    <property name="TLred1" class="ptolemy.data.expr.Parameter" value="1">
+    <property name="TLred1" class="ptolemy.data.expr.Parameter" value="0">
         <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
         </property>
         <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
@@ -259,7 +259,7 @@
         <property name="_location" class="ptolemy.kernel.util.Location" value="[785.0, -290.0]">
         </property>
     </property>
-    <property name="TLgrn1" class="ptolemy.data.expr.Parameter" value="0">
+    <property name="TLgrn1" class="ptolemy.data.expr.Parameter" value="1">
         <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
         </property>
         <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
@@ -316,7 +316,7 @@
         <property name="_location" class="ptolemy.kernel.util.Location" value="[905.0, -250.0]">
         </property>
     </property>
-    <property name="TLred3" class="ptolemy.data.expr.Parameter" value="1">
+    <property name="TLred3" class="ptolemy.data.expr.Parameter" value="0">
         <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
         </property>
         <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
@@ -335,7 +335,7 @@
         <property name="_location" class="ptolemy.kernel.util.Location" value="[1030.0, -290.0]">
         </property>
     </property>
-    <property name="TLgrn3" class="ptolemy.data.expr.Parameter" value="0">
+    <property name="TLgrn3" class="ptolemy.data.expr.Parameter" value="1">
         <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
         </property>
         <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
@@ -395,7 +395,7 @@
     <property name="DE Director" class="ptolemy.domains.de.kernel.DEDirector">
         <property name="stopTime" class="ptolemy.data.expr.Parameter" value="5000.0">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[-55.0, -325.0]">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[-55.0, -330.0]">
         </property>
     </property>
     <entity name="RandomCarType" class="ptolemy.actor.lib.RandomCarType">
@@ -729,7 +729,7 @@
     <entity name="ModalModel" class="ptolemy.domains.modal.modal.ModalModel">
         <property name="_tableauFactory" class="ptolemy.vergil.modal.modal.ModalTableauFactory">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[1080.0, 235.0]">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{1080.0, 235.0}">
         </property>
         <port name="type1" class="ptolemy.domains.modal.modal.ModalPort">
             <property name="input"/>
@@ -825,7 +825,7 @@
             </property>
             <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{-85.59823537427303, 235.91964849427694}">
             </property>
-            <property name="count" class="ptolemy.data.expr.Parameter" value="0">
+            <property name="count" class="ptolemy.data.expr.Parameter" value="12">
                 <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
                 </property>
                 <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
