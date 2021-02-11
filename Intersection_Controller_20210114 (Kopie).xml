@@ -910,16 +910,14 @@
                     <property name="_location" class="ptolemy.kernel.util.Location" value="[300.0, 345.0]">
                     </property>
                 </entity>
-                <entity name="firstCar" class="ptolemy.domains.modal.kernel.State">
-                    <property name="refinementName" class="ptolemy.kernel.util.StringAttribute" value="firstCar">
+                <entity name="exit" class="ptolemy.domains.modal.kernel.State">
+                    <property name="isFinalState" class="ptolemy.data.expr.Parameter" value="true">
                     </property>
-                    <property name="isFinalState" class="ptolemy.data.expr.Parameter" value="false">
-                    </property>
-                    <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="false">
+                    <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
                     </property>
                     <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
                     </property>
-                    <property name="_location" class="ptolemy.kernel.util.Location" value="[545.0, 445.0]">
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[540.0, 425.0]">
                     </property>
                 </entity>
                 <entity name="TLallAutoCheck" class="ptolemy.domains.modal.kernel.State">
@@ -957,7 +955,7 @@
                 <relation name="relation7" class="ptolemy.domains.modal.kernel.Transition">
                     <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="car1.type == 0 || car2.type == 0 || car3.type == 0 || car4.type == 0">
                     </property>
-                    <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute">
+                    <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="TLred1=1; TLred2=1; TLred3=1; TLred4=1; sendTo=true">
                     </property>
                     <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="1.0045835067925981">
                     </property>
@@ -978,355 +976,10 @@
                 <link port="TLall.incomingPort" relation="relation3"/>
                 <link port="TLall.outgoingPort" relation="relation6"/>
                 <link port="TLall.outgoingPort" relation="relation7"/>
-                <link port="firstCar.incomingPort" relation="relation7"/>
-                <link port="firstCar.incomingPort" relation="relation11"/>
+                <link port="exit.incomingPort" relation="relation7"/>
+                <link port="exit.incomingPort" relation="relation11"/>
                 <link port="TLallAutoCheck.outgoingPort" relation="relation3"/>
                 <link port="TLallAutoCheck.outgoingPort" relation="relation11"/>
-            </entity>
-            <entity name="firstCar" class="ptolemy.domains.modal.modal.ModalRefinement">
-                <property name="_tableauFactory" class="ptolemy.vergil.modal.modal.ModalTableauFactory">
-                </property>
-                <port name="car1" class="ptolemy.domains.modal.modal.ModalRefinementPort">
-                    <property name="input"/>
-                    <property name="defaultValue" class="ptolemy.data.expr.Parameter" value="">
-                    </property>
-                    <property name="_location" class="ptolemy.kernel.util.Location" value="[-270.0, 215.0]">
-                    </property>
-                </port>
-                <port name="car2" class="ptolemy.domains.modal.modal.ModalRefinementPort">
-                    <property name="input"/>
-                    <property name="defaultValue" class="ptolemy.data.expr.Parameter" value="">
-                    </property>
-                    <property name="_location" class="ptolemy.kernel.util.Location" value="[-270.0, 295.0]">
-                    </property>
-                </port>
-                <port name="car3" class="ptolemy.domains.modal.modal.ModalRefinementPort">
-                    <property name="input"/>
-                    <property name="defaultValue" class="ptolemy.data.expr.Parameter" value="">
-                    </property>
-                    <property name="_location" class="ptolemy.kernel.util.Location" value="[-270.0, 375.0]">
-                    </property>
-                </port>
-                <port name="car4" class="ptolemy.domains.modal.modal.ModalRefinementPort">
-                    <property name="input"/>
-                    <property name="defaultValue" class="ptolemy.data.expr.Parameter" value="">
-                    </property>
-                    <property name="_location" class="ptolemy.kernel.util.Location" value="[-270.0, 455.0]">
-                    </property>
-                </port>
-                <port name="TLred1" class="ptolemy.domains.modal.modal.ModalRefinementPort">
-                    <property name="output"/>
-                    <property name="defaultValue" class="ptolemy.data.expr.Parameter" value="">
-                    </property>
-                    <property name="_location" class="ptolemy.kernel.util.Location" value="[1000.0, 200.0]">
-                    </property>
-                </port>
-                <port name="TLred2" class="ptolemy.domains.modal.modal.ModalRefinementPort">
-                    <property name="output"/>
-                    <property name="defaultValue" class="ptolemy.data.expr.Parameter" value="">
-                    </property>
-                    <property name="_location" class="ptolemy.kernel.util.Location" value="[1000.0, 280.0]">
-                    </property>
-                </port>
-                <port name="TLred3" class="ptolemy.domains.modal.modal.ModalRefinementPort">
-                    <property name="output"/>
-                    <property name="defaultValue" class="ptolemy.data.expr.Parameter" value="">
-                    </property>
-                    <property name="_location" class="ptolemy.kernel.util.Location" value="[1000.0, 360.0]">
-                    </property>
-                </port>
-                <port name="TLred4" class="ptolemy.domains.modal.modal.ModalRefinementPort">
-                    <property name="output"/>
-                    <property name="defaultValue" class="ptolemy.data.expr.Parameter" value="">
-                    </property>
-                    <property name="_location" class="ptolemy.kernel.util.Location" value="[1000.0, 435.0]">
-                    </property>
-                </port>
-                <port name="sendTo" class="ptolemy.domains.modal.modal.ModalRefinementPort">
-                    <property name="output"/>
-                    <property name="defaultValue" class="ptolemy.data.expr.Parameter" value="">
-                    </property>
-                    <property name="_location" class="ptolemy.kernel.util.Location" value="[1000.0, 520.0]">
-                    </property>
-                </port>
-                <entity name="_Controller" class="ptolemy.domains.modal.modal.ModalController">
-                    <property name="_library" class="ptolemy.moml.LibraryAttribute">
-                        <configure>
-            <entity name="state library" class="ptolemy.kernel.CompositeEntity">
-              <input source="ptolemy/configs/basicUtilities.xml"></input>
-              <entity name="state" class="ptolemy.domains.modal.kernel.State">
-                <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory"></property>
-              </entity>
-            </entity>
-          </configure>
-                    </property>
-                    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={67, 25, 1293, 743}, maximized=true}">
-                    </property>
-                    <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1079, 611]">
-                    </property>
-                    <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="0.5120000000000007">
-                    </property>
-                    <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{740.1575654128493, 280.43997838814283}">
-                    </property>
-                    <port name="car1" class="ptolemy.domains.modal.modal.RefinementPort">
-                        <property name="input"/>
-                        <property name="defaultValue" class="ptolemy.data.expr.Parameter">
-                        </property>
-                        <property name="_location" class="ptolemy.kernel.util.Location" value="[-215.0, 190.0]">
-                        </property>
-                    </port>
-                    <port name="car2" class="ptolemy.domains.modal.modal.RefinementPort">
-                        <property name="input"/>
-                        <property name="defaultValue" class="ptolemy.data.expr.Parameter">
-                        </property>
-                        <property name="_location" class="ptolemy.kernel.util.Location" value="[-215.0, 230.0]">
-                        </property>
-                    </port>
-                    <port name="car3" class="ptolemy.domains.modal.modal.RefinementPort">
-                        <property name="input"/>
-                        <property name="defaultValue" class="ptolemy.data.expr.Parameter">
-                        </property>
-                        <property name="_location" class="ptolemy.kernel.util.Location" value="[-215.0, 270.0]">
-                        </property>
-                    </port>
-                    <port name="car4" class="ptolemy.domains.modal.modal.RefinementPort">
-                        <property name="input"/>
-                        <property name="defaultValue" class="ptolemy.data.expr.Parameter">
-                        </property>
-                        <property name="_location" class="ptolemy.kernel.util.Location" value="[-215.0, 310.0]">
-                        </property>
-                    </port>
-                    <port name="TLred1" class="ptolemy.domains.modal.modal.RefinementPort">
-                        <property name="input"/>
-                        <property name="output"/>
-                        <property name="defaultValue" class="ptolemy.data.expr.Parameter">
-                        </property>
-                        <property name="_location" class="ptolemy.kernel.util.Location" value="[250.0, 540.0]">
-                        </property>
-                    </port>
-                    <port name="TLred2" class="ptolemy.domains.modal.modal.RefinementPort">
-                        <property name="input"/>
-                        <property name="output"/>
-                        <property name="defaultValue" class="ptolemy.data.expr.Parameter">
-                        </property>
-                        <property name="_location" class="ptolemy.kernel.util.Location" value="[310.0, 540.0]">
-                        </property>
-                    </port>
-                    <port name="TLred3" class="ptolemy.domains.modal.modal.RefinementPort">
-                        <property name="input"/>
-                        <property name="output"/>
-                        <property name="defaultValue" class="ptolemy.data.expr.Parameter">
-                        </property>
-                        <property name="_location" class="ptolemy.kernel.util.Location" value="[365.0, 540.0]">
-                        </property>
-                    </port>
-                    <port name="TLred4" class="ptolemy.domains.modal.modal.RefinementPort">
-                        <property name="input"/>
-                        <property name="output"/>
-                        <property name="defaultValue" class="ptolemy.data.expr.Parameter">
-                        </property>
-                        <property name="_location" class="ptolemy.kernel.util.Location" value="[425.0, 540.0]">
-                        </property>
-                    </port>
-                    <port name="sendTo" class="ptolemy.domains.modal.modal.RefinementPort">
-                        <property name="input"/>
-                        <property name="output"/>
-                        <property name="defaultValue" class="ptolemy.data.expr.Parameter">
-                        </property>
-                        <property name="_location" class="ptolemy.kernel.util.Location" value="[490.0, 540.0]">
-                        </property>
-                    </port>
-                    <entity name="whichRoad" class="ptolemy.domains.modal.kernel.State">
-                        <property name="refinementName" class="ptolemy.kernel.util.StringAttribute">
-                        </property>
-                        <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="false">
-                        </property>
-                        <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
-                        </property>
-                        <property name="_location" class="ptolemy.kernel.util.Location" value="{350.0, 130.0}">
-                        </property>
-                        <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
-                        </property>
-                    </entity>
-                    <entity name="odd" class="ptolemy.domains.modal.kernel.State">
-                        <property name="refinementName" class="ptolemy.kernel.util.StringAttribute" value="odd">
-                        </property>
-                        <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
-                        </property>
-                        <property name="_location" class="ptolemy.kernel.util.Location" value="[155.0, 225.0]">
-                        </property>
-                        <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
-                        </property>
-                    </entity>
-                    <entity name="even" class="ptolemy.domains.modal.kernel.State">
-                        <property name="refinementName" class="ptolemy.kernel.util.StringAttribute" value="even">
-                        </property>
-                        <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
-                        </property>
-                        <property name="_location" class="ptolemy.kernel.util.Location" value="[570.0, 220.0]">
-                        </property>
-                        <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
-                        </property>
-                    </entity>
-                    <entity name="init" class="ptolemy.domains.modal.kernel.State">
-                        <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="true">
-                        </property>
-                        <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
-                        </property>
-                        <property name="_location" class="ptolemy.kernel.util.Location" value="[290.0, -30.0]">
-                        </property>
-                        <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
-                        </property>
-                    </entity>
-                    <entity name="exit" class="ptolemy.domains.modal.kernel.State">
-                        <property name="isFinalState" class="ptolemy.data.expr.Parameter" value="true">
-                        </property>
-                        <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
-                        </property>
-                        <property name="_location" class="ptolemy.kernel.util.Location" value="[355.0, 325.0]">
-                        </property>
-                        <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
-                        </property>
-                    </entity>
-                    <relation name="relation" class="ptolemy.domains.modal.kernel.Transition">
-                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="car1.speed &gt; car2.speed &amp;&amp; car1.speed &gt; car4.speed || car3.speed &gt; car2.speed &amp;&amp; car3.speed &gt; car4.speed">
-                        </property>
-                        <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="TLred1=1; TLred2=0; TLred3=1; TLred4=0">
-                        </property>
-                        <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute" value="count = count + 1">
-                        </property>
-                        <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6283185307179586">
-                        </property>
-                        <property name="gamma" class="ptolemy.data.expr.Parameter" value="2.495980654880063">
-                        </property>
-                    </relation>
-                    <relation name="relation2" class="ptolemy.domains.modal.kernel.Transition">
-                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="!(car1.speed &gt; car2.speed &amp;&amp; car1.speed &gt; car4.speed || car3.speed &gt; car2.speed &amp;&amp; car3.speed &gt; car4.speed)">
-                        </property>
-                        <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="TLred1=0; TLred2=1; TLred3=0; TLred4=1">
-                        </property>
-                        <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute" value="count = count + 1">
-                        </property>
-                        <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="-0.5753007486049392">
-                        </property>
-                        <property name="gamma" class="ptolemy.data.expr.Parameter" value="0.5915381381930476">
-                        </property>
-                    </relation>
-                    <relation name="relation3" class="ptolemy.domains.modal.kernel.Transition">
-                        <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute">
-                        </property>
-                        <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute" value="count = 0">
-                        </property>
-                        <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="-0.7673433353224722">
-                        </property>
-                        <property name="gamma" class="ptolemy.data.expr.Parameter" value="1.4583646091861535">
-                        </property>
-                    </relation>
-                    <relation name="relation4" class="ptolemy.domains.modal.kernel.Transition">
-                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="count &lt; 30">
-                        </property>
-                        <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute" value="count = count + 1">
-                        </property>
-                        <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="2.673258220843056">
-                        </property>
-                        <property name="gamma" class="ptolemy.data.expr.Parameter" value="1.7828697381397178">
-                        </property>
-                    </relation>
-                    <relation name="relation5" class="ptolemy.domains.modal.kernel.Transition">
-                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="count &lt; 30">
-                        </property>
-                        <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute" value="count = count + 1">
-                        </property>
-                        <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="2.7434898515141777">
-                        </property>
-                        <property name="gamma" class="ptolemy.data.expr.Parameter" value="-1.3257108221493812">
-                        </property>
-                    </relation>
-                    <relation name="relation6" class="ptolemy.domains.modal.kernel.Transition">
-                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="count == 30">
-                        </property>
-                        <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="TLred=1; TLred2=1; TLred3=1; TLred4=1; sendTo =true">
-                        </property>
-                        <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="1.0443208884937358">
-                        </property>
-                        <property name="gamma" class="ptolemy.data.expr.Parameter" value="0.573849884431973">
-                        </property>
-                    </relation>
-                    <relation name="relation7" class="ptolemy.domains.modal.kernel.Transition">
-                        <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="-0.9318586406761047">
-                        </property>
-                        <property name="gamma" class="ptolemy.data.expr.Parameter" value="2.573244939734648">
-                        </property>
-                    </relation>
-                    <link port="whichRoad.incomingPort" relation="relation3"/>
-                    <link port="whichRoad.outgoingPort" relation="relation"/>
-                    <link port="whichRoad.outgoingPort" relation="relation2"/>
-                    <link port="odd.incomingPort" relation="relation"/>
-                    <link port="odd.incomingPort" relation="relation4"/>
-                    <link port="odd.outgoingPort" relation="relation4"/>
-                    <link port="odd.outgoingPort" relation="relation6"/>
-                    <link port="even.incomingPort" relation="relation2"/>
-                    <link port="even.incomingPort" relation="relation5"/>
-                    <link port="even.outgoingPort" relation="relation5"/>
-                    <link port="even.outgoingPort" relation="relation7"/>
-                    <link port="init.outgoingPort" relation="relation3"/>
-                    <link port="exit.incomingPort" relation="relation6"/>
-                    <link port="exit.incomingPort" relation="relation7"/>
-                </entity>
-                <relation name="car1Relation" class="ptolemy.actor.TypedIORelation">
-                    <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
-                    </property>
-                </relation>
-                <relation name="car2Relation" class="ptolemy.actor.TypedIORelation">
-                    <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
-                    </property>
-                </relation>
-                <relation name="car3Relation" class="ptolemy.actor.TypedIORelation">
-                    <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
-                    </property>
-                </relation>
-                <relation name="car4Relation" class="ptolemy.actor.TypedIORelation">
-                    <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
-                    </property>
-                </relation>
-                <relation name="TLred1Relation" class="ptolemy.actor.TypedIORelation">
-                    <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
-                    </property>
-                </relation>
-                <relation name="TLred2Relation" class="ptolemy.actor.TypedIORelation">
-                    <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
-                    </property>
-                </relation>
-                <relation name="TLred3Relation" class="ptolemy.actor.TypedIORelation">
-                    <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
-                    </property>
-                </relation>
-                <relation name="TLred4Relation" class="ptolemy.actor.TypedIORelation">
-                    <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
-                    </property>
-                </relation>
-                <relation name="sendToRelation" class="ptolemy.actor.TypedIORelation">
-                    <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
-                    </property>
-                </relation>
-                <link port="car1" relation="car1Relation"/>
-                <link port="car2" relation="car2Relation"/>
-                <link port="car3" relation="car3Relation"/>
-                <link port="car4" relation="car4Relation"/>
-                <link port="TLred1" relation="TLred1Relation"/>
-                <link port="TLred2" relation="TLred2Relation"/>
-                <link port="TLred3" relation="TLred3Relation"/>
-                <link port="TLred4" relation="TLred4Relation"/>
-                <link port="sendTo" relation="sendToRelation"/>
-                <link port="_Controller.car1" relation="car1Relation"/>
-                <link port="_Controller.car2" relation="car2Relation"/>
-                <link port="_Controller.car3" relation="car3Relation"/>
-                <link port="_Controller.car4" relation="car4Relation"/>
-                <link port="_Controller.TLred1" relation="TLred1Relation"/>
-                <link port="_Controller.TLred2" relation="TLred2Relation"/>
-                <link port="_Controller.TLred3" relation="TLred3Relation"/>
-                <link port="_Controller.TLred4" relation="TLred4Relation"/>
-                <link port="_Controller.sendTo" relation="sendToRelation"/>
             </entity>
             <relation name="car1Relation" class="ptolemy.actor.TypedIORelation">
                 <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
@@ -1382,15 +1035,371 @@
             <link port="_Controller.TLred3" relation="TLred3Relation"/>
             <link port="_Controller.TLred4" relation="TLred4Relation"/>
             <link port="_Controller.sendTo" relation="sendToRelation"/>
-            <link port="firstCar.car1" relation="car1Relation"/>
-            <link port="firstCar.car2" relation="car2Relation"/>
-            <link port="firstCar.car3" relation="car3Relation"/>
-            <link port="firstCar.car4" relation="car4Relation"/>
-            <link port="firstCar.TLred1" relation="TLred1Relation"/>
-            <link port="firstCar.TLred2" relation="TLred2Relation"/>
-            <link port="firstCar.TLred3" relation="TLred3Relation"/>
-            <link port="firstCar.TLred4" relation="TLred4Relation"/>
-            <link port="firstCar.sendTo" relation="sendToRelation"/>
+        </entity>
+        <entity name="Strategie" class="ptolemy.domains.modal.modal.ModalModel">
+            <property name="_tableauFactory" class="ptolemy.vergil.modal.modal.ModalTableauFactory">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[270.0, 630.0]">
+            </property>
+            <port name="car1" class="ptolemy.domains.modal.modal.ModalPort">
+                <property name="input"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="car2" class="ptolemy.domains.modal.modal.ModalPort">
+                <property name="input"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="car3" class="ptolemy.domains.modal.modal.ModalPort">
+                <property name="input"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="car4" class="ptolemy.domains.modal.modal.ModalPort">
+                <property name="input"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="TLred1" class="ptolemy.domains.modal.modal.ModalPort">
+                <property name="output"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="TLred2" class="ptolemy.domains.modal.modal.ModalPort">
+                <property name="output"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="TLred3" class="ptolemy.domains.modal.modal.ModalPort">
+                <property name="output"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="TLred4" class="ptolemy.domains.modal.modal.ModalPort">
+                <property name="output"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="trigger" class="ptolemy.domains.modal.modal.ModalPort">
+                <property name="input"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="sendTo" class="ptolemy.domains.modal.modal.ModalPort">
+                <property name="output"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <entity name="_Controller" class="ptolemy.domains.modal.modal.ModalController">
+                <property name="_library" class="ptolemy.moml.LibraryAttribute">
+                    <configure>
+      <entity name="state library" class="ptolemy.kernel.CompositeEntity"><input source="ptolemy/configs/basicUtilities.xml"></input><entity name="state" class="ptolemy.domains.modal.kernel.State"><property name="_centerName" class="ptolemy.kernel.util.Attribute"></property><property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory"></property></entity></entity>
+    </configure>
+                </property>
+                <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={67, 25, 1293, 743}, maximized=true}">
+                </property>
+                <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1206, 712]">
+                </property>
+                <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="0.6400000000000006">
+                </property>
+                <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{330.78575581395364, 260.3235465116279}">
+                </property>
+                <property name="count" class="ptolemy.data.expr.Parameter" value="0">
+                    <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
+                    </property>
+                    <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
+                        <property name="_color" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 1.0, 1.0}">
+                        </property>
+                    </property>
+                    <property name="_smallIconDescription" class="ptolemy.kernel.util.SingletonConfigurableAttribute">
+                        <configure>
+      <svg>
+        <text x="20" style="font-size:14; font-family:SansSerif; fill:blue" y="20">-P-</text>
+      </svg>
+    </configure>
+                    </property>
+                    <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
+                    </property>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[-380.0, -55.0]">
+                    </property>
+                </property>
+                <port name="car1" class="ptolemy.domains.modal.modal.RefinementPort">
+                    <property name="input"/>
+                    <property name="defaultValue" class="ptolemy.data.expr.Parameter" value="">
+                    </property>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[-465.0, 170.0]">
+                    </property>
+                </port>
+                <port name="car2" class="ptolemy.domains.modal.modal.RefinementPort">
+                    <property name="input"/>
+                    <property name="defaultValue" class="ptolemy.data.expr.Parameter" value="">
+                    </property>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[-465.0, 250.0]">
+                    </property>
+                </port>
+                <port name="car3" class="ptolemy.domains.modal.modal.RefinementPort">
+                    <property name="input"/>
+                    <property name="defaultValue" class="ptolemy.data.expr.Parameter" value="">
+                    </property>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[-465.0, 330.0]">
+                    </property>
+                </port>
+                <port name="car4" class="ptolemy.domains.modal.modal.RefinementPort">
+                    <property name="input"/>
+                    <property name="defaultValue" class="ptolemy.data.expr.Parameter" value="">
+                    </property>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[-465.0, 410.0]">
+                    </property>
+                </port>
+                <port name="TLred1" class="ptolemy.domains.modal.modal.RefinementPort">
+                    <property name="input"/>
+                    <property name="output"/>
+                    <property name="defaultValue" class="ptolemy.data.expr.Parameter" value="">
+                    </property>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[1125.0, 65.0]">
+                    </property>
+                </port>
+                <port name="TLred2" class="ptolemy.domains.modal.modal.RefinementPort">
+                    <property name="input"/>
+                    <property name="output"/>
+                    <property name="defaultValue" class="ptolemy.data.expr.Parameter" value="">
+                    </property>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[1125.0, 145.0]">
+                    </property>
+                </port>
+                <port name="TLred3" class="ptolemy.domains.modal.modal.RefinementPort">
+                    <property name="input"/>
+                    <property name="output"/>
+                    <property name="defaultValue" class="ptolemy.data.expr.Parameter" value="">
+                    </property>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[1125.0, 225.0]">
+                    </property>
+                </port>
+                <port name="TLred4" class="ptolemy.domains.modal.modal.RefinementPort">
+                    <property name="input"/>
+                    <property name="output"/>
+                    <property name="defaultValue" class="ptolemy.data.expr.Parameter" value="">
+                    </property>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[1125.0, 300.0]">
+                    </property>
+                </port>
+                <port name="trigger" class="ptolemy.domains.modal.modal.RefinementPort">
+                    <property name="input"/>
+                    <property name="defaultValue" class="ptolemy.data.expr.Parameter" value="">
+                    </property>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[-465.0, 90.0]">
+                    </property>
+                </port>
+                <port name="sendTo" class="ptolemy.domains.modal.modal.RefinementPort">
+                    <property name="input"/>
+                    <property name="output"/>
+                    <property name="defaultValue" class="ptolemy.data.expr.Parameter" value="">
+                    </property>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[1125.0, 390.0]">
+                    </property>
+                </port>
+                <entity name="TLeven" class="ptolemy.domains.modal.kernel.State">
+                    <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="false">
+                    </property>
+                    <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                    </property>
+                    <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                    </property>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[550.0, 265.0]">
+                    </property>
+                </entity>
+                <entity name="TLodd" class="ptolemy.domains.modal.kernel.State">
+                    <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="false">
+                    </property>
+                    <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                    </property>
+                    <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                    </property>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[180.0, 255.0]">
+                    </property>
+                </entity>
+                <entity name="TLinit" class="ptolemy.domains.modal.kernel.State">
+                    <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="true">
+                    </property>
+                    <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                    </property>
+                    <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                    </property>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[310.0, -30.0]">
+                    </property>
+                </entity>
+                <entity name="StrategieCheck" class="ptolemy.domains.modal.kernel.State">
+                    <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                    </property>
+                    <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                    </property>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[370.0, 200.0]">
+                    </property>
+                </entity>
+                <entity name="exit" class="ptolemy.domains.modal.kernel.State">
+                    <property name="isFinalState" class="ptolemy.data.expr.Parameter" value="true">
+                    </property>
+                    <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                    </property>
+                    <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                    </property>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[370.0, 365.0]">
+                    </property>
+                </entity>
+                <relation name="relation" class="ptolemy.domains.modal.kernel.Transition">
+                    <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="(car2.speed&gt;car1.speed&amp;&amp;car2.speed&gt;car3.speed)||(car4.speed&gt;car1.speed&amp;&amp;car4.speed&gt;car3.speed)">
+                    </property>
+                    <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="TLred1=1; TLred2=0; TLred3=1; TLred4=0">
+                    </property>
+                    <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute" value="count=count+1">
+                    </property>
+                    <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="-0.4908994662170792">
+                    </property>
+                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="-0.0014359896544048198">
+                    </property>
+                </relation>
+                <relation name="relation2" class="ptolemy.domains.modal.kernel.Transition">
+                    <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="(car1.speed&gt;car2.speed&amp;&amp;car1.speed&gt;car4.speed)||(car3.speed&gt;car2.speed&amp;&amp;car3.speed&gt;car4.speed)">
+                    </property>
+                    <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="TLred1=0; TLred2=1; TLred3=0; TLred4=1">
+                    </property>
+                    <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute" value="count=count+1">
+                    </property>
+                    <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.5331845986585964">
+                    </property>
+                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="3.114592622846573">
+                    </property>
+                </relation>
+                <relation name="relation5" class="ptolemy.domains.modal.kernel.Transition">
+                    <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="count&lt;30">
+                    </property>
+                    <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute" value="count=count+1">
+                    </property>
+                    <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="2.3615616844500997">
+                    </property>
+                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="-2.4071783851175748">
+                    </property>
+                </relation>
+                <relation name="relation4" class="ptolemy.domains.modal.kernel.Transition">
+                    <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="count&lt;30">
+                    </property>
+                    <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute" value="count=count+1">
+                    </property>
+                    <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="2.176242613330064">
+                    </property>
+                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="-4.066671487055158">
+                    </property>
+                </relation>
+                <relation name="relation9" class="ptolemy.domains.modal.kernel.Transition">
+                    <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="count==30">
+                    </property>
+                    <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="TLred1=1; TLred2=1; TLred3=1;  TLred4=1; sendTo = true">
+                    </property>
+                    <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute" value="count=0">
+                    </property>
+                    <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="-0.9895671384046518">
+                    </property>
+                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="2.4976054651193764">
+                    </property>
+                </relation>
+                <relation name="relation8" class="ptolemy.domains.modal.kernel.Transition">
+                    <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="count==30">
+                    </property>
+                    <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="TLred1=1; TLred2=1; TLred3=1; TLred4=1; sendTo = true">
+                    </property>
+                    <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute" value="count=0">
+                    </property>
+                    <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.9547948368252629">
+                    </property>
+                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="0.6297613921113365">
+                    </property>
+                </relation>
+                <relation name="relation10" class="ptolemy.domains.modal.kernel.Transition">
+                    <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="trigger == true">
+                    </property>
+                    <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute" value="count=0">
+                    </property>
+                    <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="-0.7231046792131411">
+                    </property>
+                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="0.9778639827107155">
+                    </property>
+                </relation>
+                <link port="TLeven.incomingPort" relation="relation"/>
+                <link port="TLeven.incomingPort" relation="relation5"/>
+                <link port="TLeven.outgoingPort" relation="relation5"/>
+                <link port="TLeven.outgoingPort" relation="relation9"/>
+                <link port="TLodd.incomingPort" relation="relation2"/>
+                <link port="TLodd.incomingPort" relation="relation4"/>
+                <link port="TLodd.outgoingPort" relation="relation4"/>
+                <link port="TLodd.outgoingPort" relation="relation8"/>
+                <link port="TLinit.outgoingPort" relation="relation10"/>
+                <link port="StrategieCheck.incomingPort" relation="relation10"/>
+                <link port="StrategieCheck.outgoingPort" relation="relation"/>
+                <link port="StrategieCheck.outgoingPort" relation="relation2"/>
+                <link port="exit.incomingPort" relation="relation8"/>
+                <link port="exit.incomingPort" relation="relation9"/>
+            </entity>
+            <relation name="car1Relation" class="ptolemy.actor.TypedIORelation">
+                <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+                </property>
+            </relation>
+            <relation name="car2Relation" class="ptolemy.actor.TypedIORelation">
+                <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+                </property>
+            </relation>
+            <relation name="car3Relation" class="ptolemy.actor.TypedIORelation">
+                <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+                </property>
+            </relation>
+            <relation name="car4Relation" class="ptolemy.actor.TypedIORelation">
+                <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+                </property>
+            </relation>
+            <relation name="TLred1Relation" class="ptolemy.actor.TypedIORelation">
+                <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+                </property>
+            </relation>
+            <relation name="TLred2Relation" class="ptolemy.actor.TypedIORelation">
+                <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+                </property>
+            </relation>
+            <relation name="TLred3Relation" class="ptolemy.actor.TypedIORelation">
+                <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+                </property>
+            </relation>
+            <relation name="TLred4Relation" class="ptolemy.actor.TypedIORelation">
+                <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+                </property>
+            </relation>
+            <relation name="triggerRelation" class="ptolemy.actor.TypedIORelation">
+                <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+                </property>
+            </relation>
+            <relation name="sendToRelation" class="ptolemy.actor.TypedIORelation">
+                <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+                </property>
+            </relation>
+            <link port="car1" relation="car1Relation"/>
+            <link port="car2" relation="car2Relation"/>
+            <link port="car3" relation="car3Relation"/>
+            <link port="car4" relation="car4Relation"/>
+            <link port="TLred1" relation="TLred1Relation"/>
+            <link port="TLred2" relation="TLred2Relation"/>
+            <link port="TLred3" relation="TLred3Relation"/>
+            <link port="TLred4" relation="TLred4Relation"/>
+            <link port="trigger" relation="triggerRelation"/>
+            <link port="sendTo" relation="sendToRelation"/>
+            <link port="_Controller.car1" relation="car1Relation"/>
+            <link port="_Controller.car2" relation="car2Relation"/>
+            <link port="_Controller.car3" relation="car3Relation"/>
+            <link port="_Controller.car4" relation="car4Relation"/>
+            <link port="_Controller.TLred1" relation="TLred1Relation"/>
+            <link port="_Controller.TLred2" relation="TLred2Relation"/>
+            <link port="_Controller.TLred3" relation="TLred3Relation"/>
+            <link port="_Controller.TLred4" relation="TLred4Relation"/>
+            <link port="_Controller.trigger" relation="triggerRelation"/>
+            <link port="_Controller.sendTo" relation="sendToRelation"/>
         </entity>
         <entity name="SharedQueue" class="ptolemy.domains.de.lib.SharedQueue">
             <property name="_location" class="ptolemy.kernel.util.Location" value="[-35.0, 130.0]">
@@ -1564,6 +1573,8 @@
             </property>
             <port name="input" class="ptolemy.actor.TypedIOPort">
                 <property name="input"/>
+                <property name="defaultValue" class="ptolemy.data.expr.Parameter">
+                </property>
             </port>
         </entity>
         <relation name="relation13" class="ptolemy.actor.TypedIORelation">
@@ -1571,6 +1582,8 @@
             </property>
             <vertex name="vertex1" value="[712.5, 640.0]">
             </vertex>
+        </relation>
+        <relation name="relation9" class="ptolemy.actor.TypedIORelation">
         </relation>
         <relation name="relation15" class="ptolemy.actor.TypedIORelation">
         </relation>
@@ -1580,9 +1593,15 @@
         </relation>
         <relation name="relation20" class="ptolemy.actor.TypedIORelation">
         </relation>
+        <relation name="relation21" class="ptolemy.actor.TypedIORelation">
+        </relation>
         <relation name="relation22" class="ptolemy.actor.TypedIORelation">
         </relation>
         <relation name="relation23" class="ptolemy.actor.TypedIORelation">
+        </relation>
+        <relation name="relation24" class="ptolemy.actor.TypedIORelation">
+        </relation>
+        <relation name="relation25" class="ptolemy.actor.TypedIORelation">
         </relation>
         <relation name="relation27" class="ptolemy.actor.TypedIORelation">
             <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
@@ -1652,11 +1671,9 @@
         </relation>
         <relation name="relation18" class="ptolemy.actor.TypedIORelation">
         </relation>
-        <relation name="relation31" class="ptolemy.actor.TypedIORelation">
-            <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
-            </property>
-            <vertex name="vertex1" value="[85.0, 130.0]">
-            </vertex>
+        <relation name="relation14" class="ptolemy.actor.TypedIORelation">
+        </relation>
+        <relation name="relation19" class="ptolemy.actor.TypedIORelation">
         </relation>
         <link port="car1" relation="relation18"/>
         <link port="car2" relation="relation15"/>
@@ -1666,7 +1683,7 @@
         <link port="TL2" relation="relation6"/>
         <link port="TL3" relation="relation10"/>
         <link port="TL4" relation="relation30"/>
-        <link port="CarType.car1" relation="relation31"/>
+        <link port="CarType.car1" relation="relation14"/>
         <link port="CarType.car2" relation="relation20"/>
         <link port="CarType.car3" relation="relation22"/>
         <link port="CarType.car4" relation="relation23"/>
@@ -1674,14 +1691,28 @@
         <link port="CarType.TLred2" relation="relation35"/>
         <link port="CarType.TLred3" relation="relation37"/>
         <link port="CarType.TLred4" relation="relation38"/>
+        <link port="CarType.sendTo" relation="relation9"/>
+        <link port="Strategie.car1" relation="relation19"/>
+        <link port="Strategie.car2" relation="relation21"/>
+        <link port="Strategie.car3" relation="relation24"/>
+        <link port="Strategie.car4" relation="relation25"/>
+        <link port="Strategie.TLred1" relation="relation27"/>
+        <link port="Strategie.TLred2" relation="relation35"/>
+        <link port="Strategie.TLred3" relation="relation37"/>
+        <link port="Strategie.TLred4" relation="relation38"/>
+        <link port="Strategie.trigger" relation="relation9"/>
         <link port="SharedQueue.input" relation="relation18"/>
-        <link port="SharedQueue.output" relation="relation31"/>
+        <link port="SharedQueue.output" relation="relation14"/>
+        <link port="SharedQueue.output" relation="relation19"/>
         <link port="SharedQueue2.input" relation="relation15"/>
         <link port="SharedQueue2.output" relation="relation20"/>
+        <link port="SharedQueue2.output" relation="relation21"/>
         <link port="SharedQueue3.input" relation="relation16"/>
         <link port="SharedQueue3.output" relation="relation22"/>
+        <link port="SharedQueue3.output" relation="relation24"/>
         <link port="SharedQueue4.input" relation="relation17"/>
         <link port="SharedQueue4.output" relation="relation23"/>
+        <link port="SharedQueue4.output" relation="relation25"/>
         <link port="AbsoluteValue.input" relation="relation4"/>
         <link port="AbsoluteValue.output" relation="relation"/>
         <link port="AbsoluteValue2.input" relation="relation2"/>
